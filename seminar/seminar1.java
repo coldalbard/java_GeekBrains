@@ -21,6 +21,13 @@ public class seminar1 {
         // System.out.printf("Please enter your text: ");
         // String text = sc.nextLine();
         // System.out.println("Result = " + SwapPlaces(text));
+
+        // fourth task
+        // System.out.printf("Please enter the first line:");
+        // String fisrtText = sc.nextLine();
+        // System.out.printf("Please enter the second line:");
+        // String secondText = sc.nextLine();
+        // System.out.println("Result = " + AddBinary(fisrtText, secondText));
     }
 
 
@@ -41,7 +48,7 @@ public class seminar1 {
         return multi - nSum;
     }
 
-    
+
     /**
      * @apiNote Дана последовательность N целых чисел. Найти количество положительных чисел, после которых следует отрицательное число.
      * @param number входящее целое число(кол-во чисел которые у нас будут)
@@ -75,5 +82,37 @@ public class seminar1 {
         String firsHalf = text.substring(0, text.length() / 2);
         String secondHalf = text.substring( text.length() / 2);
         return secondHalf + firsHalf;
+    }
+
+    
+    /**
+     * @apiNote Даны две двоичные строки и , возвращаем их сумму в виде двоичной строки.ab
+     * @param firstText первая строка
+     * @param secondText вторая строка
+     * @return двоичная сумма двух строк
+     */
+
+    public static String AddBinary(String firstText, String secondText) {
+        if(firstText.length() < secondText.length()){
+            AddBinary(secondText, firstText);
+        }
+        int k = 0;
+        int j = secondText.length() - 1;
+        String resText = "";
+        for (int i = firstText.length() - 1; i >= 0; i--) {
+            if(firstText.charAt(i) == '1'){
+                k += 1;
+            }
+            if(j >= 0 && secondText.charAt(j) == '1'){
+                k += 1;
+            }
+            resText = k % 2 + resText;
+            j -= 1;
+            k /= 2;
+        }
+        if(k == 1){
+            resText = k % 2 + resText;
+        }
+        return resText;
     }
 }
