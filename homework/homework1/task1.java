@@ -9,6 +9,11 @@ public class task1 {
         System.out.println("Inverted text: " + ReverseText(text));
     }
 
+    /**
+     * @apiNote При наличии входной строки измените порядок слов на противоположный.
+     * @param text Начальный текст
+     * @return Возвращает строку слов в обратном порядке, объединенных одним пробелом.
+     */
     public static String ReverseText(String text) {
         text = text.trim();
         String[] arText = text.split(" ");
