@@ -8,6 +8,14 @@ public class task2 {
         System.out.println(SumPositiveNumbers(size - 1));
     }
 
+
+    /**
+     * @apiNote ана последовательность целых чисел, оканчивающаяся нулем. 
+     * Найти сумму положительных чисел, после которых следует отрицательное число.
+     * @param size кол-во чисел
+     * @return сумма положительных чисел, после которых следует отрицательное число.
+     */
+    
     public static int SumPositiveNumbers(int size) {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Please, enter your first number: ");
