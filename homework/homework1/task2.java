@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class task2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Please enter the number of numbers: ");
-        int size = sc.nextInt();
-        System.out.println(SumPositiveNumbers(size - 1));
+        System.out.println("Result = " + SumPositiveNumbers(sc));
+        sc.close();
     }
 
 
@@ -16,19 +15,17 @@ public class task2 {
      * @return сумма положительных чисел, после которых следует отрицательное число.
      */
     
-    public static int SumPositiveNumbers(int size) {
-        Scanner sc = new Scanner(System.in);
+    public static int SumPositiveNumbers(Scanner in) {
         System.out.printf("Please, enter your first number: ");
-        int first_num = sc.nextInt();
+        int firstNum = in.nextInt();
         int countSumPosNumb = 0;
-        while (size != 0) {
+        while (firstNum != 0) {
             System.out.printf("Please, enter your next number: ");
-            int number = sc.nextInt();
-            size -= 1;
-            if (number < 0 && first_num > 0) {
-                countSumPosNumb += first_num;
+            int number = in.nextInt();
+            if (number < 0 && firstNum > 0) {
+                countSumPosNumb += firstNum;
             }
-            first_num = number;
+            firstNum = number;
         }
         return countSumPosNumb;
     }
