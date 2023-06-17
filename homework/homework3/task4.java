@@ -13,6 +13,11 @@ public class task4 {
         MinMaxAr(arr);
     }
 
+    /** метод для создания Массива
+     * @param in Сканнер для ввода
+     * @param n Кол-во элементов
+     * @return готовый массив
+     */
     public static ArrayList<Integer> CreateIntArray(Scanner in, int n) {
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i = 0; i < n; i++) {
@@ -23,6 +28,11 @@ public class task4 {
         return arr;
     }
 
+    /**
+     * @apiNote 4. Задан целочисленный список ArrayList. 
+     * Найти минимальное, максимальное и среднее из этого списка.
+     * @param arr массив
+     */
     public static void MinMaxAr(ArrayList<Integer> arr) {
         arr.sort(null);
         Integer sumNum = 0;
