@@ -11,6 +11,18 @@ public class task1 {
         searchWord(searchStr.toLowerCase(), str);
     }
 
+
+    /**
+     * @apiNote 1) Подсчитать количество искомого слова, через map 
+     * (наполнением значение, где искомое слово будет являться ключом), вносить все слова не нужно
+     * Пример: Россия идет вперед всей планеты. Планета — это не Россия.
+     * Запрос: Россия
+     * Ответ: Россия - 2
+     * toLoverCase().
+     * (Усложнение - игнорировать пунктуацию)
+     * @param search искомое слово
+     * @param text сам текст
+     */
     public static void searchWord(String search, String text) {
         Map<String, Integer> mapCh = new HashMap<>();
         String[] textArr = text.split(" ");
