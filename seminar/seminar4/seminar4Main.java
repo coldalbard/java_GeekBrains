@@ -1,12 +1,10 @@
 package java_gb.seminar.seminar4;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Stack;
-import java.util.StringJoiner;
 
 public class seminar4Main {
     public static void main(String[] args) {
